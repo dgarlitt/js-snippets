@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Number Formatting Example</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+		<script src="../bindings/number-formatting-binding.js"></script>
+		<script>
+			var NumberFormattingSample = {
+				this.myNumber = ko.observable(2239874.34095);
+			};
+
+			$(function() {
+				ko.applyBindings(NumberFormattingSample);
+			});
+		</script>
+	</head>
+	<body>
+		<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
+		<div>Default: <span data-bind="number: myNumber"></span></div>
+		<div>3 Decimal Places: <span data-bind="number: myNumber, precision: 3"></span></div>
+		<div>US Dollars: <span data-bind="number: myNumber, precision: 2, symbol: '$ '"></span></div>
+		<div>
+			Euros UK:
+			<span data-bind="number: myNumber, precision: 2,
+							symbol: '&euro; ', decimal: ','"></span>
+		</div>
+		<div>
+			Euros Spain:
+			<span data-bind="number: myNumber , precision: 2,
+							symbol: ' &euro;', decimal: ',',
+							separator: ' ', after: true"></span>
+		</div>
+	</body>
+</html>
