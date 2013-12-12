@@ -19,6 +19,13 @@
 			    color: blue;
 			    padding-left: 1em;
 			}
+			#example label {
+				padding-right: 1em;
+			}
+			#example input {
+				padding: 1em;
+				width: 50%;
+			}
 		</style>
 		<script>
 			var NumberFormattingSample = {
@@ -53,6 +60,7 @@
 	    		<p>A simple example of how to add a number formatting binding to a knockout.js app</p>
 
 	    		<div id="example">
+					<label>Change this number to test it out</label>
 					<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
 					<div>Default: <span data-bind="number: myNumber"></span></div>
 					<pre>
