@@ -2,6 +2,11 @@
 <html>
 	<head>
 		<title>Number Formatting Example</title>
+		<meta charset='utf-8' />
+	    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	    <meta name="description" content="Knockout-snippets : number formatting binding example" />
+
+	    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
 		<script src="../javascripts/bindings/number-formatting-binding.js"></script>
@@ -26,20 +31,60 @@
 		</script>
 	</head>
 	<body>
-		<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
-		<div>Default: <span data-bind="number: myNumber"></span></div>
-		<div>3 Decimal Places: <span data-bind="number: myNumber, precision: 3"></span></div>
-		<div>US Dollars: <span data-bind="number: myNumber, precision: 2, symbol: '$ '"></span></div>
-		<div>
-			Euros UK:
-			<span data-bind="number: myNumber, precision: 2,
-							symbol: '&euro; ', decimal: ','"></span>
-		</div>
-		<div>
-			Euros Spain:
-			<span data-bind="number: myNumber , precision: 2,
-							symbol: ' &euro;', decimal: ',',
-							separator: ' ', after: true"></span>
-		</div>
+		<!-- HEADER -->
+	    <div id="header_wrap" class="outer">
+	        <header class="inner">
+	          <a id="forkme_banner" href="https://github.com/dgarlitt/knockout-snippets">View on GitHub</a>
+
+	          <h1 id="project_title">Knockout-snippets</h1>
+	          <h2 id="project_tagline">Helpful snippets for knockout.js</h2>
+
+	            <section id="downloads">
+	              <a class="zip_download_link" href="https://github.com/dgarlitt/knockout-snippets/zipball/master">Download this project as a .zip file</a>
+	              <a class="tar_download_link" href="https://github.com/dgarlitt/knockout-snippets/tarball/master">Download this project as a tar.gz file</a>
+	            </section>
+	        </header>
+	    </div>
+
+	    <!-- MAIN CONTENT -->
+	    <div id="main_content_wrap" class="outer">
+	    	<section id="main_content" class="inner">
+
+				<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
+				<div>Default: <span data-bind="number: myNumber"></span></div>
+				<div>3 Decimal Places: <span data-bind="number: myNumber, precision: 3"></span></div>
+				<div>US Dollars: <span data-bind="number: myNumber, precision: 2, symbol: '$ '"></span></div>
+				<div>
+					Euros UK:
+					<span data-bind="number: myNumber, precision: 2,
+									symbol: '&euro; ', decimal: ','"></span>
+				</div>
+				<div>
+					Euros Spain:
+					<span data-bind="number: myNumber , precision: 2,
+									symbol: ' &euro;', decimal: ',',
+									separator: ' ', after: true"></span>
+				</div>
+	    	</section>
+	    </div>
+
+	    <!-- FOOTER  -->
+	    <div id="footer_wrap" class="outer">
+	      <footer class="inner">
+	        <p class="copyright">Knockout-snippets maintained by <a href="https://github.com/dgarlitt">dgarlitt</a></p>
+	        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+	      </footer>
+	    </div>
+
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-46416801-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
 	</body>
 </html>
