@@ -11,11 +11,11 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
 		<script src="../javascripts/bindings/number-formatting-binding.js"></script>
 		<style>
-			div {
+			#example div {
 			    font-family: Arial, Helvetica, sans-serif;
 			    padding: .5em;
 			}
-			span {
+			#example span {
 			    color: blue;
 			    padding-left: 1em;
 			}
@@ -31,7 +31,7 @@
 		</script>
 	</head>
 	<body>
-		<!-- HEADER -->
+	    <!-- HEADER -->
 	    <div id="header_wrap" class="outer">
 	        <header class="inner">
 	          <a id="forkme_banner" href="https://github.com/dgarlitt/knockout-snippets">View on GitHub</a>
@@ -49,21 +49,40 @@
 	    <!-- MAIN CONTENT -->
 	    <div id="main_content_wrap" class="outer">
 	    	<section id="main_content" class="inner">
+	    		<h1><a name="knockout-snippets" class="anchor" href="#knockout-snippets"><span class="octicon octicon-link"></span></a>Number Formatting</h1>
+	    		<p>A simple example of how to add a number formatting binding to a knockout.js app</p>
 
-				<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
-				<div>Default: <span data-bind="number: myNumber"></span></div>
-				<div>3 Decimal Places: <span data-bind="number: myNumber, precision: 3"></span></div>
-				<div>US Dollars: <span data-bind="number: myNumber, precision: 2, symbol: '$ '"></span></div>
-				<div>
-					Euros UK:
-					<span data-bind="number: myNumber, precision: 2,
-									symbol: '&euro; ', decimal: ','"></span>
-				</div>
-				<div>
-					Euros Spain:
-					<span data-bind="number: myNumber , precision: 2,
-									symbol: ' &euro;', decimal: ',',
-									separator: ' ', after: true"></span>
+	    		<div id="example">
+					<input data-bind="value: myNumber, valueUpdate: 'afterkeydown'" />
+					<div>Default: <span data-bind="number: myNumber"></span></div>
+					<pre>
+&lt;span data-bind="number: myNumber"&gt;&lt;/span&gt;
+					</pre>
+					<div>3 Decimal Places: <span data-bind="number: myNumber, precision: 3"></span></div>
+					<pre>
+&lt;span data-bind="number: myNumber, precision: 3"&gt;&lt;/span&gt;
+					</pre>
+					<div>US Dollars: <span data-bind="number: myNumber, precision: 2, symbol: '$ '"></span></div>
+					<pre>
+&lt;span data-bind="number: myNumber, precision: 2, symbol: '$ '"&gt;&lt;/span&gt;
+					</pre>
+					<div>
+						Euros UK:
+						<span data-bind="number: myNumber, precision: 2,
+										symbol: '&euro; ', decimal: ','"></span>
+					</div>
+					<pre>
+&lt;span data-bind="number: myNumber, precision: 2, symbol: '&euro; ', decimal: ','"&gt;&lt;/span&gt;
+					</pre>
+					<div>
+						Euros Spain:
+						<span data-bind="number: myNumber , precision: 2,
+										symbol: ' &euro;', decimal: ',',
+										separator: ' ', after: true"></span>
+					</div>
+					<pre>
+&lt;span data-bind="number: myNumber , precision: 2, symbol: ' &euro;', decimal: ',', separator: ' ', after: true"&gt;
+					</pre>
 				</div>
 	    	</section>
 	    </div>
