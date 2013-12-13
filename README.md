@@ -1,7 +1,7 @@
 js-snippets
 =================
 
-Helpful snippets for JavaScript
+Helpful snippets for JavaScript ([visit homepage](http://dgarlitt.github.io/js-snippets/))
 
 ##Examples:
 
