@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="js-snippets : Helpful snippets for knockout.js" />
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="description" content="js-snippets : Helpful snippets for knockout.js" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>js-snippets</title>
-  </head>
+        <title>js-snippets</title>
+    </head>
 
-  <body>
+    <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/dgarlitt/js-snippets">View on GitHub</a>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+                <header class="inner">
+                    <a id="forkme_banner" href="https://github.com/dgarlitt/js-snippets">View on GitHub</a>
 
-          <h1 id="project_title">js-snippets</h1>
-          <h2 id="project_tagline">Helpful snippets for knockout.js</h2>
+                    <h1 id="project_title">js-snippets</h1>
+                    <h2 id="project_tagline">Helpful snippets for Javascript developers</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/dgarlitt/js-snippets/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/dgarlitt/js-snippets/tarball/master">Download this project as a tar.gz file</a>
+                    <section id="downloads">
+                        <a class="zip_download_link" href="https://github.com/dgarlitt/js-snippets/zipball/master">Download this project as a .zip file</a>
+                        <a class="tar_download_link" href="https://github.com/dgarlitt/js-snippets/tarball/master">Download this project as a tar.gz file</a>
+                    </section>
+                </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h1><a name="js-snippets" class="anchor" href="#js-snippets"><span class="octicon octicon-link"></span></a>js-snippets</h1>
+
+                <p>Helpful snippets for Javascript developers</p>
+
+                <article>
+                    <h2><a name="knockout" class="anchor" href="#knockout"><span class="octicon octicon-link"></span></a>Knockout.js</h2>
+
+                    <h4><a name="number-formatting-binding" class="anchor" href="#number-formatting-binding"><span class="octicon octicon-link"></span></a><a href="examples/knockout/bindings/number-formatting.html">Number Formatting Binding</a></h4>
+
+                    <hr>
+
+                    <p>This binding can be used to format numbers in a variety of ways. By default, it will add commas to separate hundreds, thousands, millions, etc. The separator can be changed from a comma to any character. Decimal precision can be specified as well. Also, it can be used to format money in a variety of ways.</p>
+
+                    <a href="examples/knockout/bindings/number-formatting.html">See it in action here!</a><br />
+                    <a href="https://github.com/dgarlitt/js-snippets/blob/master/javascripts/knockout/bindings/number-formatting.js">Get the code here!</a><br />
+                    Or, fiddle with it: <a href="http://jsfiddle.net/dgarlitt/q4x4z/">http://jsfiddle.net/dgarlitt/q4x4z/</a>
+
+                    <hr>
+                </article>
+
+                <article>
+                    <h2><a name="node" class="anchor" href="#node"><span class="octicon octicon-link"></span></a>Node.js</h2>
+                    <h4><a name="cookies-response" class="anchor" href="#cookies-response"><span class="octicon octicon-link"></span></a><a href="examples/node/middleware/cookies-response.html">Cookies in Response Object - Middleware</a></h4>
+
+                    <hr>
+
+                    <p>Okay, this one is really simple, but could be useful if you are using Express or Connect in your Node apps and need to make use of cookies in your templates. Granted, you could pass the cookie values you need to the templates in your routes, but in some cases you will find yourself doing this repetitively. This simple middleware makes the <code>cookie()</code> method and <code>cookies</code> object from your Express/Connect app  accessible from within your templates.</p>
+
+                    <p>I will be the first to admit that it is bad practice for templates to be setting values, so the <code>cookie()</code> method is unnecessary. But, I threw it in there just for fun.</p>
+
+                    <a href="examples/node/middleware/cookies-response.html">See how to use it</a><br />
+                    <a href="https://github.com/dgarlitt/js-snippets/blob/master/javascripts/node/middleware/cookies-response.js">Get the code here!</a>
+
+                </article>
             </section>
-        </header>
-    </div>
+        </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="js-snippets" class="anchor" href="#js-snippets"><span class="octicon octicon-link"></span></a>js-snippets</h1>
+        <!-- FOOTER    -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p class="copyright">js-snippets maintained by <a href="https://github.com/dgarlitt">dgarlitt</a></p>
+                <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+            </footer>
+        </div>
 
-<p>Helpful snippets for knockout.js</p>
-
-<h2>
-<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples:</h2>
-
-<h4>
-<a name="number-formatting-bindingjs" class="anchor" href="#number-formatting-bindingjs"><span class="octicon octicon-link"></span></a>number-formatting-binding.js</h4>
-
-<hr><p>This binding can be used to format numbers in a variety of ways. By default, it will add commas to separate hundreds, thousands, millions, etc. The separator can be changed from a comma to any character. Decimal precision can be specified as well. Also, it can be used to format money in a variety of ways.</p>
-
-<a href="examples/knockout/number-formatting-example.html">See it in action here!</a>
-<br /><a href="https://github.com/dgarlitt/js-snippets/blob/master/javascripts/knockout/bindings/number-formatting-binding.js">View the code here!</a>
-<br />Or, fiddle with it: <a href="http://jsfiddle.net/dgarlitt/q4x4z/">http://jsfiddle.net/dgarlitt/q4x4z/</a>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">js-snippets maintained by <a href="https://github.com/dgarlitt">dgarlitt</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
+        <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
+        </script>
+        <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("UA-46416801-1");
+                var pageTracker = _gat._getTracker("UA-46416801-1");
             pageTracker._trackPageview();
             } catch(err) {}
-          </script>
+        </script>
 
 
-  </body>
+    </body>
 </html>

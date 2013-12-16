@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8' />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+        <meta name="description" content="js-snippets : Node.js: Cookies in Response Object Middleware" />
+
+        <link rel="stylesheet" type="text/css" media="screen" href="../../../stylesheets/stylesheet.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $(function() {
+                $.ajax({
+                    url: '../../../javascripts/node/middleware/cookies-response.js',
+                    cache: false,
+                    dataType: 'text',
+                    success: function(data) {
+                        $('#cookies-response-code').text(data);
+                    }
+
+                })
+            })
+        </script>
+
+        <title>Cookies in Response Object Middleware</title>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+                <header class="inner">
+                    <a id="forkme_banner" href="https://github.com/dgarlitt/js-snippets">View on GitHub</a>
+
+                    <h1 id="project_title">js-snippets</h1>
+                    <h2 id="project_tagline">Helpful snippets for Javascript developers</h2>
+
+                    <section id="downloads">
+                        <a class="zip_download_link" href="https://github.com/dgarlitt/js-snippets/zipball/master">Download this project as a .zip file</a>
+                        <a class="tar_download_link" href="https://github.com/dgarlitt/js-snippets/tarball/master">Download this project as a tar.gz file</a>
+                    </section>
+                </header>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+                <h1><a name="js-snippets" class="anchor" href="#js-snippets"><span class="octicon octicon-link"></span></a>Node.js: Cookie in Response Object Middleware</h1>
+
+                <p>
+                    Access cookies easily from all of your templates.
+                    <br /><a href="https://github.com/dgarlitt/js-snippets/blob/master/javascripts/node/middleware/cookies-response.js">Get the code here!</a>
+                </p>
+
+                <h3>Installation</h3>
+                <p>Look for where the <code>app.use(express.cookieParser());</code> line in your app and on the next line add the following code:</p>
+
+                <pre id="cookies-response-code"></pre>
+
+                <p>Ideally, you would extract this code into it's own middleware library, but following this method will get it working for you and you can tweak it later.</p>
+
+                <h3>Usage</h3>
+
+                <p>Now, from your template, you can access the <code>cookie()</code> method to set a cookie value and the <code>cookies</code> object to retrieve a cookie value.<p>
+
+                <span>Assuming you left the defaults in place in the above code, from an EJS template you could do the following:</span>
+                <pre>
+<% cookie('myCookie3', 'My Cookie Value') %>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        MyCookie1 = <%= cookies.myCookie1 %>
+        &lt;br /&gt;
+        myCookie2 = <%= cookies.myCookie2 %>
+        &lt;br /&gt;
+        myCookie3 = <%= cookies.myCookie3 %>
+    &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+
+                <p>Generally speaking, you'd never want to set any values from within your templates. Templates should really just be reading values. That being said, using the <code>cookie()</code> method from within a template would be a no-no.</p>
+            </section>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer_wrap" class="outer">
+            <footer class="inner">
+                <p class="copyright">js-snippets maintained by <a href="https://github.com/dgarlitt">dgarlitt</a></p>
+                <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+            </footer>
+        </div>
+
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-46416801-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+        </script>
+
+
+    </body>
+</html>
