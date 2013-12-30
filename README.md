@@ -19,4 +19,4 @@ Okay, this one is really simple, but could be useful if you are using Express or
 I will be the first to admit that it is bad practice for templates to be setting values, so the cookie() method is unnecessary. But, I threw it in there just for fun.
 
  - [See how to it works](http://dgarlitt.github.io/js-snippets/examples/node/middleware/cookies-response.html)
- - [Get the code](https://github.com/dgarlitt/js-snippets/blob/master/javascript/node/middleware/cookies-response.js)
+ - [Get the code](https://github.com/dgarlitt/js-snippets/blob/master/javascripts/node/middleware/cookies-response.js)
