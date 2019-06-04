@@ -9,7 +9,7 @@ ko.bindingHandlers.number = {
 
 		var	separator = unwrap(aba().separator) || defaults.separator,
 			decimal = unwrap(aba().decimal) || defaults.decimal,
-			precision = unwrap(aba().precision) || defaults.precision,
+			precision = unwrap(aba().precision) === 0 ? 0 : (unwrap(aba().precision) || defaults.precision),
 			symbol = unwrap(aba().symbol) || defaults.symbol,
 			after = unwrap(aba().after) || defaults.after;
 
@@ -35,7 +35,7 @@ ko.bindingHandlers.number = {
 	defaults: {
 		separator: ',',
 		decimal: '.',
-		precision: 0,
+		precision: -1,
 		symbol: '',
 		after: false
 	}
