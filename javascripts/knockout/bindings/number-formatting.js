@@ -15,7 +15,7 @@ ko.bindingHandlers.number = {
 
         value = parseFloat(value) || 0;
 
-        if (precision > 0)
+        if (precision >= 0)
             value = value.toFixed(precision)
 
             numarray = value.toString().split('.');
